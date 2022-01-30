@@ -1,0 +1,71 @@
+{
+    "studenti": [
+        {
+        "ime":"Sasa",
+        "prezime":"Stojiljkovic",
+        "indeks":17470,
+        "predmeti":["NBP", "TZPU", "PP"]
+        },
+        {
+        "ime":"Sasa1",
+        "prezime":"Stojiljkovic",
+        "indeks":17450,
+        "predmeti":["NBP", "TZPU", "RG"]
+        },
+        {
+        "ime":"Sasa2",
+        "prezime":"Stojiljkovic",
+        "indeks":17000,
+        "predmeti":["WEB", "TZPU", "PP"]
+        }
+      ],
+    "raspored":[
+      {
+        "dan":"ponedeljak",
+        "casovi": ["WEB","TZPU","PP","RG"]
+      },
+      {
+        "dan":"utorak",
+        "casovi": ["WEB","TZPU","PP","RG"]
+      },
+      {
+        "dan":"sreda",
+        "casovi": ["WEB","TZPU","PP","RG"]
+      },
+      {
+        "dan":"cetvrtak",
+        "casovi": ["WEB","TZPU","PP","RG"]
+      },
+      {
+        "dan":"petak",
+        "casovi": ["WEB","TZPU","PP","RG"]
+      }
+          
+    ],
+    "trajanje":[
+      {
+        "ime":"TZPU",
+        "trajanje":5,
+        "brucenika":100
+      },
+      {
+        "ime":"WEB",
+        "trajanje":10,
+        "brucenika":100
+      }
+      ,
+      {
+        "ime":"RG",
+        "trajanje":15,
+        "brucenika":100
+      }
+      ,
+      {
+        "ime":"PP",
+        "trajanje":20,
+        "brucenika":100
+      }
+
+    ],
+    "ucionice":["ucionica1","ucionica2","ucionica3"]
+  }    

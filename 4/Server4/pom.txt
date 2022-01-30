@@ -1,0 +1,4 @@
+  "scripts": {
+    "api": "json-server ./json-server/db.json --watch",
+    "all": "concurrently --kill-others \"npm run api\" \"nodemon app.js\""
+  },
