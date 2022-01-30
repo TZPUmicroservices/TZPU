@@ -1,0 +1,393 @@
+[
+    {
+
+        "ime": "Matematika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2021."
+    },
+    {
+        "ime": "Elektrotehnika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2014."
+    },
+    {
+        "ime": "Distribuirani_sistemi",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2013."
+    },
+    {
+        "ime": "Distribuirani_sistemi",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2012."
+    },
+    {
+        "ime": "Programski_jezici",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2020."
+    },
+    {
+        "ime": "OOP",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Mikroelektronika",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "RM",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "AOR",
+        "trajanje":45,
+        "dodatno_vreme":22,
+        "godina":"2020."
+    },
+    {
+        "ime": "AOR",
+        "trajanje":45,
+        "dodatno_vreme":55,
+        "godina":"2019."
+    },
+    {
+        "ime": "TZPU",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2020."
+    },
+    {
+        "ime": "TZPU",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Uvod_u_racunarstvo",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Elektronske_komponente",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Fizika",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2018."
+    },
+    {
+        "ime": "Fizika",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Elektrotehnika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Elektrotehnika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2018."
+    },
+    {
+        "ime": "Elektrotehnika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2017."
+    },
+    {
+        "ime": "Elektrotehnika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2016."
+    },
+    {
+        "ime": "Elektrotehnika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2015."
+    },
+    {
+        "ime": "Elektrotehnika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2014."
+    },
+    {
+        "ime": "Teorija_grafova",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2013."
+    },
+    {
+        "ime": "Teorija_grafova",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2012."
+    },
+    {
+        "ime": "Baze_podataka",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2020."
+    },
+    {
+        "ime": "Baze_podataka",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Strukture_podataka",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Strukture_podataka",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Logicko_projektovanje",
+        "trajanje":45,
+        "dodatno_vreme":22,
+        "godina":"2020."
+    },
+    {
+        "ime": "Logicko_projektovanje",
+        "trajanje":45,
+        "dodatno_vreme":55,
+        "godina":"2019."
+    },
+    {
+        "ime": "OOP",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2020."
+    },
+    {
+        "ime": "OOP",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Racunarski_sistemi",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Racunarski_sistemi",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Diskretna_matematika",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2018."
+    },
+    {
+        "ime": "Diskretna_matematika",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Elektronske_komponente",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Matematika2",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2018."
+    },
+    {
+        "ime": "Matematika2",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2017."
+    },
+    {
+        "ime": "AIP",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2016."
+    },
+    {
+        "ime": "AIP",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2015."
+    },
+    {
+        "ime": "Elektrotehnika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2014."
+    },
+    {
+        "ime": "Distribuirani_sistemi",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2013."
+    },
+    {
+        "ime": "Distribuirani_sistemi",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2012."
+    },
+    {
+        "ime": "VI",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2020."
+    },
+    {
+        "ime": "VI",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "AI",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "PP",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "PP",
+        "trajanje":45,
+        "dodatno_vreme":22,
+        "godina":"2020."
+    },
+    {
+        "ime": "SWE",
+        "trajanje":45,
+        "dodatno_vreme":55,
+        "godina":"2019."
+    },
+    {
+        "ime": "SWE",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2020."
+    },
+    {
+        "ime": "SWE",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Informacioni_sistemi",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "RM",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "RM",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2018."
+    },
+    {
+        "ime": "OS",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "OS",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "OS",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2018."
+    },
+    {
+        "ime": "Teorija_igara",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2017."
+    },
+    {
+        "ime": "Sistemi_baza_podataka",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2016."
+    },
+    {
+        "ime": "Teorija_igara",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2015."
+    },
+    {
+        "ime": "WEB",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2018."
+    },
+    {
+        "ime": "WEB",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2017."
+    },
+    {
+        "ime": "RG",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2016."
+    },
+    {
+        "ime": "RG",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2015."
+    }
+]

@@ -1,0 +1,129 @@
+[
+    {
+
+        "ime": "Matematika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2021."
+    },
+    {
+        "ime": "Elektrotehnika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2014."
+    },
+    {
+        "ime": "Distribuirani_sistemi",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2013."
+    },
+    {
+        "ime": "Distribuirani_sistemi",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2012."
+    },
+    {
+        "ime": "Programski_jezici",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2020."
+    },
+    {
+        "ime": "OOP",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "MIkroelektronika",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Racunarske_mreze",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "AOR",
+        "trajanje":45,
+        "dodatno_vreme":22,
+        "godina":"2020."
+    },
+    {
+        "ime": "AOR",
+        "trajanje":45,
+        "dodatno_vreme":55,
+        "godina":"2019."
+    },
+    {
+        "ime": "TZPU",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2020."
+    },
+    {
+        "ime": "TZPU",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Uvod_u_racunarstvo",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Elektronske_komponente",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Fizika",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2018."
+    },
+    {
+        "ime": "Fizika",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Elektrotehnika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2019."
+    },
+    {
+        "ime": "Elektrotehnika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2018."
+    },
+    {
+        "ime": "Elektrotehnika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2017."
+    },
+    {
+        "ime": "Elektrotehnika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2016."
+    },
+    {
+        "ime": "Elektrotehnika1",
+        "trajanje":45,
+        "dodatno_vreme":5,
+        "godina":"2015."
+    }
+]
