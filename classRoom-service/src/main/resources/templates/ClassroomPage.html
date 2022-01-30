@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Spring Boot Thymeleaf - Bootstrap WebJars</title>
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+
+</head>
+<body>
+<table class="table table-striped" id="reqTable">
+    <tr>
+        <th> ID of request</th>
+        <th> Students number </th>
+        <th> Course name </th>
+        <th> Type of class</th>
+        <th> Select </th>
+    </tr>
+    <tr th:if="${requestList.empty}">
+        <td colspan="2"> No requests available </td>
+    </tr>
+</table>
+<button class="btn btn-info" type="submit" name="action" onclick="GetRequest()"> Get Requests </button>
+<script>
+    function GetRequest()
+    {
+    fetch("http://localhost:8080/classroomController/getRequest").then(el =>
+    el.json()).then(lista =>
+    {
+        const tabela = document.getElementById("reqTable").querySelector("tbody");
+        tabela.innerHTML="<tr><th> ID of request</th><th> Students number </th><th> Course name</th><th> Type of class</th><th> Select </th></tr>";
+        lista.forEach(el =>{
+        let row = document.createElement("tr");
+        row.setAttribute("id",el.requestId+","+el.courseName);
+        let td = document.createElement("td");
+        let span = document.createElement("span");
+        span.innerHTML = el.requestId;
+        td.appendChild(span)
+        row.appendChild(td);
+        td = document.createElement("td");
+        span = document.createElement("span");
+        span.innerHTML = el.studentNumber;
+        td.appendChild(span)
+        row.appendChild(td);
+        td = document.createElement("td");
+        span = document.createElement("span");
+        span.innerHTML = el.courseName;
+        td.appendChild(span)
+        row.appendChild(td);
+        td = document.createElement("td");
+        span = document.createElement("span");
+        span.innerHTML = el.typeOfClass;
+        td.appendChild(span)
+        row.appendChild(td);
+
+        let cb = document.createElement("input");
+        cb.type="radio";
+        cb.name="selekcija";
+        cb.value=el.requestId +"," +el.courseName;
+        td = document.createElement("td");
+        td.appendChild(cb)
+        row.appendChild(td)
+        tabela.appendChild(row);
+        })
+    })
+    }
+</script>
+
+<table class="table table-striped" id="classroom-table">
+    <tr>
+        <th> ID </th>
+        <th> Classroom name </th>
+        <th> Capacity</th>
+        <th> Classroom type </th>
+        <th> Available </th>
+        <th> Available after </th>
+        <th> Number of computer </th>
+        <th> Select </th>
+    </tr>
+<tr th:if="${listA.empty}">
+    <td colspan="2"> No ClassRoom available </td>
+</tr>
+<tr th:each="classroom : ${listA}">
+    <td><span th:text="${classroom.id}"> ID </span></td>
+    <td><span th:text="${classroom.name}"> Name </span></td>
+    <td><span th:text="${classroom.capacity}"> Capacity </span></td>
+    <td><span th:text="${classroom.classroomType}"> Name </span></td>
+    <td><span th:text="${classroom.isFree}"> Available </span></td>
+    <td><span th:text="${classroom.availableAfter}"> AvailableAfter </span></td>
+    <td><span th:text="${classroom.numberOfComputers}"> AvailableAfter </span></td>
+    <td><input type="checkbox" th:value=${classroom.id} th:name="classroom" /></td>
+</tr>
+</table>
+<button class="btn btn-info" type="submit" id="sendclassroom" name="action" onclick="SendClassroom()"> Send classroom </button>
+<script>
+    function SendClassroom()
+    {
+        var requestIdCourse = $('input[name=selekcija]:checked').val();
+
+        reqLista = requestIdCourse.split(',');
+
+        requestId = reqLista[0];
+        courseName = reqLista[1];
+
+
+        var selectedClassroom = $('input[name=classroom]:checked').val();
+        console.log(selectedClassroom);
+
+        var valueList = [];
+        $('#classroom-table tr').each(function() {
+        $(this).find("input[name='classroom']:checked").each(function() {
+        var values = [];
+        $(this).closest("td").siblings("td").each(function() {
+        values.push($(this).text());
+         });
+         valueList.push(values.join(", "));
+        });
+       });
+
+       console.log("STIKLIRANO");
+       console.log(valueList);
+       console.log("IDE FOREACH");
+       let str;
+       var listaImena = [];
+
+       valueList.forEach(element =>{
+       console.log(element);
+       pomocnaLista = element.split(', ');
+       console.log(pomocnaLista);
+       listaImena.push(pomocnaLista[1]);
+       });
+
+        console.log("IDE LISTA IMENA");
+        console.log(listaImena);
+
+        let r = document.getElementById(requestId+","+courseName);
+        r.parentNode.removeChild(r);
+        fetch('http://localhost:8080/deleteElement/requestId/courseName', {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                      },
+                body: JSON.stringify(data),
+                }).then((response) => response.json())
+                .then((data) => {
+                    console.log('Success:', data);
+                    })
+                .catch((error) => {
+                      console.error('Error:', error);
+                });
+
+        }
+
+const data = {
+       requestId: requestId,
+       courseName: courseName,
+       classroomName: listaImena
+       };
+
+        console.log(data);
+fetch('http://100.109.130.74:3500/setClassRoom', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                      },
+                body: JSON.stringify(data),
+                }).then((response) => response.json())
+                .then((data) => {
+                    console.log('Success:', data);
+                    })
+                .catch((error) => {
+                      console.error('Error:', error);
+                });
+
+        }
+
+</script>
+
+</body>
+<script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/1.12.9-1/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.0.0-2/js/bootstrap.min.js}"></script>
+</html>

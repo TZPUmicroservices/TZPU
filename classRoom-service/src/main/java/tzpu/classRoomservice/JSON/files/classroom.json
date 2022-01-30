@@ -1,0 +1,103 @@
+{
+  "classrooms": [
+    {
+      "id": "0",
+      "name": "Amfiteatar A1",
+      "capacity": 200,
+      "classroomType": "Amfiteatar",
+      "availableAfter": "00:00:00",
+      "numberOfComputers": 0,
+      "free": true
+    },
+    {
+      "id": "1",
+      "name": "Amfiteatar A2",
+      "capacity": 200,
+      "classroomType": "Amfiteatar",
+      "availableAfter": "12:00:00",
+      "numberOfComputers": 0,
+      "free": false
+    },
+    {
+      "id": "2",
+      "name": "Amfiteatar A3",
+      "capacity": 150,
+      "classroomType": "Amfiteatar",
+      "availableAfter": "00:00:00",
+      "numberOfComputers": 0,
+      "free": true
+    },
+    {
+      "id": "3",
+      "name": "Amfiteatar A4",
+      "capacity": 100,
+      "classroomType": "Amfiteatar",
+      "availableAfter": "00:00:00",
+      "numberOfComputers": 0,
+      "free": true
+    },
+    {
+      "id": "4",
+      "name": "112",
+      "capacity": 80,
+      "classroomType": "Ucionica",
+      "availableAfter": "14:00:00",
+      "numberOfComputers": 0,
+      "free": false
+    },
+    {
+      "id": "5",
+      "name": "113",
+      "capacity": 90,
+      "classroomType": "Ucionica",
+      "availableAfter": "00:00:00",
+      "numberOfComputers": 0,
+      "free": true
+    },
+    {
+      "id": "6",
+      "name": "114",
+      "capacity": 80,
+      "classroomType": "Ucionica",
+      "availableAfter": "00:00:00",
+      "numberOfComputers": 0,
+      "free": true
+    },
+    {
+      "id": "7",
+      "name": "223",
+      "capacity": 50,
+      "classroomType": "Ucionica",
+      "availableAfter": "15:30:00",
+      "numberOfComputers": 0,
+      "free": false
+    },
+    {
+      "id": "8",
+      "name": "224",
+      "capacity": 50,
+      "classroomType": "Ucionica",
+      "availableAfter": "00:00:00",
+      "numberOfComputers": 0,
+      "free": true
+    },
+    {
+      "id": "9",
+      "name": "531",
+      "capacity": 60,
+      "classroomType": "Laboratorija",
+      "availableAfter": "00:00:00",
+      "numberOfComputers": 30,
+      "free": false
+    },
+    {
+      "id": "10",
+      "name": "532",
+      "capacity": 80,
+      "classroomType": "Laboratorija",
+      "availableAfter": "00:00:00",
+      "numberOfComputers": 40,
+      "free": true
+    }
+  ]
+}
