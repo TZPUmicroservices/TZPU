@@ -27,11 +27,6 @@ const io: Server<DefaultEventsMap, DefaultEventsMap> = require("socket.io")(
 const PORT = process.env.PORT || 3500;
 
 io.on("connection", (socket) => {
-  /*socket.on("kanal1", message =>{
-    console.log("Poruka: "+ message)
-    io.emit("kanal2", "povratna poruka")
-  })*/
-
   socket.on("disconnect", (message) => {
     const student = students.get(socket.id);
     const respid = myResponse.findIndex(
@@ -91,6 +86,22 @@ app.get("/", (req: Request, res: Response): void => {
   );
 });
 
+app.get("/classroompowerofftest", (req: Request, res: Response): void => {
+  io.emit(
+    "U" + 17000,
+    JSON.stringify({ name: req.query.name, time: req.query.time })
+  );
+  res.send(
+    JSON.stringify([
+      {
+        requestId: "1",
+        studentNumber: 50,
+        typeOfClass: "Amfiteatar",
+      },
+    ])
+  );
+});
+
 app.get("/classroompoweroff", (req: Request, res: Response): void => {
   const studenti: { index: number; cas: string }[] = [];
   myResponse.forEach((resp) => {
@@ -110,6 +121,14 @@ app.get("/classroompoweroff", (req: Request, res: Response): void => {
     });
   });
   res.send(studenti);
+});
+
+app.get("/importantnotify", (req: Request, res: Response): void => {
+  const ind: number[] = [];
+  students.forEach((s) => {
+    if (ind.indexOf(s.indeks) < 0) ind.push(s.indeks);
+  });
+  res.send(ind);
 });
 
 app.post("/setClassRoom", (req: Request, res: Response): void => {

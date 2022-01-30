@@ -1,0 +1,9 @@
+<div class="notification {{ data.important }}" *ngIf="data">
+  <div class="notificationleft" (click)="hide($event)">
+    <img src="../assets/images/next.png" alt="" />
+  </div>
+  <div class="data">
+    <h2>Obavestenje</h2>
+    <p>{{ data.text }}</p>
+  </div>
+</div>

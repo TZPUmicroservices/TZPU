@@ -19,7 +19,6 @@ export class FetchService {
     const response = await fetch(
       "http://100.71.13.58:8081/Predmet/Prosek/" + name
     );
-    console.log(response);
     const data: { ime: string; trajanje: number; brucenika: number }[] =
       await response.json();
     // const num:Promise<number>;
@@ -27,8 +26,7 @@ export class FetchService {
   }
 
   async getClassRoom(numOfStudents: number, id: string, courseName: string) {
-
-    fetch("http://100.95.77.60:8080/classroomController/sendRequest", {
+    await fetch("http://100.95.77.60:8080/classroomController/sendRequest", {
       method: "POST",
       body: JSON.stringify({
         requestId: id,

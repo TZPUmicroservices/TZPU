@@ -1,0 +1,34 @@
+.notificationleft {
+  background-color: #1572a1;
+  width: 20px;
+  height: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.notificationleft img {
+  pointer-events: none;
+}
+
+.notification {
+  opacity: 0.9;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
+  padding-right: 10px;
+  background-color: rgb(139, 139, 139);
+  display: flex;
+  flex-direction: row;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 0px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  transition: 1s;
+}
+
+.data {
+  width: 300px;
+  color: white;
+  padding-left: 10px;
+}
+
+.true {
+  background-color: rgb(214, 39, 8);
+}

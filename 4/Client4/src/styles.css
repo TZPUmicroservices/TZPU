@@ -1,87 +1,109 @@
 /* You can add global styles to this file, and also import other style files */
 
-
-
-
-.container{
-    background-color: rgb(236, 236, 236);
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    justify-content: flex-start;
-    flex-direction: column;
-
+.container {
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
-.inputindex{
-    display: flex;
-    flex-direction: column;
-    background-color: #1572A1;
-    height: min-content;
-    color: rgb(231, 231, 231);
+.inputindex {
+  display: flex;
+  flex-direction: column;
+  background-color: #1572a1;
+  height: min-content;
+  color: rgb(231, 231, 231);
+  font-family: "Montserrat", sans-serif;
 
-    padding: 20px;
-    align-self: center;
-    margin-top: 15%;
+  padding: 20px;
+  align-self: center;
+  margin-top: 15%;
 
-    box-shadow:
-      inset 0 -3em 3em rgba(0,0,0,0.1),
-         0 0  0 0px rgb(255,255,255),
-         0.3em 0.3em 1em rgba(0,0,0,0.3);
-
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 0px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
-.inputindex input[type='button']{
-    height: 50px;
-    border: none;
-    background-color: white;
-    font-weight: bold;
-    border-radius: 10px;
+.inputindex input[type="button"] {
+  height: 50px;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  border-radius: 10px;
 }
 
-.inputindex input[type='number']{
-    height: 20px;
-    margin-bottom: 10px;
-    border: none;
-    background-color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    padding-left: 10px;
+.inputindex input[type="number"] {
+  height: 20px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  padding-left: 10px;
 }
 
-.days{
-    display: flex;
-    background-color: darkviolet;
-    height: min-content;
-    justify-content: center;
+.days {
+  display: flex;
+  background-color: #1572a1;
+  height: min-content;
+  justify-content: center;
 }
-.days h1{
-    margin-left: 10px;
-    margin-left: 10px;
-    padding: 10px;
-    background-color: deepskyblue;
-    cursor: pointer;
-}
+.days h1 {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
 
-
-.days h1:hover{
-    background-color: dimgray;
-}
-.schedule{
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat", sans-serif;
 }
 
-.cas{
-    background-color: dodgerblue;
-    width: 300px;
-    display: flex;
-    justify-content: space-around;
-    margin:20px;
+.days h1:hover {
+  box-shadow: inset 0 -3em 3em rgba(255, 255, 255, 0.1),
+    0 0 0 0px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+.schedule {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
 }
 
+.cas {
+  background-color: #1572a1;
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
 
-.hide{
-    display: none;
+  margin: 20px;
+
+  box-shadow: inset 0 -3em 3em rgba(255, 255, 255, 0.1),
+    0 0 0 0px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.cas .podaci {
+  border-right: 2px solid white;
+  width: 50%;
+}
+
+.cas .ucionice {
+  width: 30%;
+}
+.odmor {
+  background-color: teal;
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+
+  margin: 20px;
+
+  box-shadow: inset 0 -3em 3em rgba(255, 255, 255, 0.1),
+    0 0 0 0px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.hide {
+  display: none;
 }
