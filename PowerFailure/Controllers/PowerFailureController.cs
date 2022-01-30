@@ -13,12 +13,17 @@ using Notification.HubConfig;
 
 namespace PowerFailure.Controllers
 {
+    class Student
+    {
+        public int index;
+        public string cas;
+    }
     [ApiController]
     [Route("[controller]")]
     public class PowerFailureController : ControllerBase
     {
 
-        List<int> studenti;
+        List<Student> studenti;
         private IHubContext<PowerFailureHub> _hub;
         public PowerFailureController(IHubContext<PowerFailureHub> hub)
         {
@@ -28,7 +33,7 @@ namespace PowerFailure.Controllers
         [Route("NedostupnaUcionica")]
         public async Task<IActionResult> NedostupnaUcionica(string ucionica,int time)
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://100.71.13.58:8081/Predmet/Prosek/AOR");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://100.109.130.74:3500/classroompoweroff?name="+ucionica+"&time="+time);
             
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
 
@@ -36,23 +41,25 @@ namespace PowerFailure.Controllers
             using (Stream stream = response.GetResponseStream())
             using (StreamReader reader = new StreamReader(stream))
             {
-                string rez = reader.ReadToEnd();
-                string[] par = rez.Split("|");
-                //string ss = "[1,2,3,33,22,11]";
-                studenti= JsonConvert.DeserializeObject<List<int>>(par[0]);
-                HttpWebRequest Notifyrequest = (HttpWebRequest)WebRequest.Create("http://localhost:5000/Notification/Failure?studenti_index="+ par[0] + "&text="+ "Predmet" + rez[1] + " ce se odrzati u ucionici " + rez[2]);
-                Notifyrequest.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
-                using (HttpWebResponse response1 = (HttpWebResponse)Notifyrequest.GetResponse())
-                { 
-                    return Ok(studenti);
+                string rez =reader.ReadToEnd();
+                studenti= JsonConvert.DeserializeObject<List<Student>>(rez);
+                if (studenti.Count != 0)
+                {
+                    HttpWebRequest Notifyrequest = (HttpWebRequest)WebRequest.Create("https://localhost:44344/api/Notification/Failure?studenti_index=" + rez + "&text=" + "Predmet " + studenti[0].cas + " se odlaze za " + time + " minuta");
+                    Notifyrequest.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
+                    using (HttpWebResponse response1 = (HttpWebResponse)Notifyrequest.GetResponse())
+                    {
+                        return Ok(studenti);
+                    }
                 }
+                return BadRequest();
             }
         }
         [HttpGet]
-        [Route("OdloziSve")]
-        public async Task<IActionResult> OdloziSve(int time)
+        [Route("ObavestiSveStudente")]
+        public async Task<IActionResult> ObavestiSveStudente(string poruka)
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://100.71.13.58:8081/Predmet/Prosek/AOR");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://100.109.130.74:3500/importantnotify");
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
 
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
@@ -60,13 +67,11 @@ namespace PowerFailure.Controllers
             using (StreamReader reader = new StreamReader(stream))
             {
                 string rez = reader.ReadToEnd();
-                //string ss = "[1,2,3,33,22,11]";
-                studenti = JsonConvert.DeserializeObject<List<int>>(rez);
-                HttpWebRequest Notifyrequest = (HttpWebRequest)WebRequest.Create("http://localhost:5000/Notification/Failure?studenti_index=" + rez + "&text=" + "Predavanja se odlazu " + time + " minuta");
+                HttpWebRequest Notifyrequest = (HttpWebRequest)WebRequest.Create("https://localhost:44344/api/Notification/Notify?studenti_index=" + rez + "&text=" + poruka);
                 Notifyrequest.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
                 using (HttpWebResponse response1 = (HttpWebResponse)Notifyrequest.GetResponse())
                 {
-                    return Ok(studenti);
+                    return Ok(rez);
                 }
             }
             
@@ -75,7 +80,7 @@ namespace PowerFailure.Controllers
         [Route("OdloziNaNeodredjenoVreme")]
         public async Task<IActionResult> OdloziNaNeodredjenoVreme()
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://100.71.13.58:8081/Predmet/Prosek/AOR");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://100.109.130.74:3500/importantnotify");
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
 
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
@@ -84,8 +89,8 @@ namespace PowerFailure.Controllers
             {
                 string rez = reader.ReadToEnd();
                 //string ss = "[1,2,3,33,22,11]";
-                studenti = JsonConvert.DeserializeObject<List<int>>(rez);
-                HttpWebRequest Notifyrequest = (HttpWebRequest)WebRequest.Create("http://localhost:5000/Notification/Failure?studenti_index=" + rez + "&text=" + "Sva predavanja se odlazu");
+                studenti = JsonConvert.DeserializeObject<List<Student>>(rez);
+                HttpWebRequest Notifyrequest = (HttpWebRequest)WebRequest.Create("http://localhost:5000/api/Notification/Failure?studenti_index=" + rez + "&text=" + "Sva predavanja se odlazu");
                 Notifyrequest.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
                 using (HttpWebResponse response1 = (HttpWebResponse)Notifyrequest.GetResponse())
                 {

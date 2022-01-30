@@ -12,37 +12,47 @@ using Notification.HubConfig;
 
 namespace Notification.Controllers
 {
-    [Route("[controller]")]
+    class Student
+    {
+        public int index;
+        public string cas;
+    }
+    [Route("api/[controller]")]
     [ApiController]
     public class NotificationController : ControllerBase
     {
-        private List<int> studenti;
+        private List<Student> studenti;
+        private List<int> indeksi;
         private IHubContext<NotificationHub> _hub;
         public NotificationController(IHubContext<NotificationHub> hub)
         {
             _hub = hub;
         }
-        
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok();
+        }
         [HttpGet]
         [Route("Notify")]
         public async Task<IActionResult> Notify(string studenti_index,string text)
         {
-            studenti = JsonConvert.DeserializeObject<List<int>>(studenti_index);
-            foreach (int index in studenti)
+            indeksi = JsonConvert.DeserializeObject<List<int>>(studenti_index);
+            foreach (int index in indeksi)
             {
-                await _hub.Clients.All.SendAsync(index.ToString(), text);
+                await _hub.Clients.All.SendAsync("I" + index.ToString(), text);
             }
-            return Ok(new { Message = text});
+            return Ok();
         }
         [HttpGet]
         [Route("Failure")]
         public async Task<IActionResult> Failure(string studenti_index, string text)
         {
             Console.WriteLine(text);
-            studenti = JsonConvert.DeserializeObject<List<int>>(studenti_index);
-            foreach (int index in studenti)
+            studenti = JsonConvert.DeserializeObject<List<Student>>(studenti_index);
+            foreach (Student index in studenti)
             {
-                await _hub.Clients.All.SendAsync(index.ToString(), text);
+                await _hub.Clients.All.SendAsync("N"+index.index.ToString(), text);
             }
             return Ok(new { Message =text });
         }
